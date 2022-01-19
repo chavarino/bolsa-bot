@@ -1,4 +1,4 @@
-Esta aplicación es un bot condifigurable para comprar y vender automaticamente en un broker determinado.
+Esta aplicación es un bot configurable para comprar y vender automaticamente en un broker determinado. Permite seleccionar puntos de compra y stoploss al mismo tiempo. Permite lanzar el gatillo de venta mediante ganancias y ademas contiene una calculadora de ganancias/perdidas con el precio actual. Conectado mediante websockets a investing.
 
 
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
