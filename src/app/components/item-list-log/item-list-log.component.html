@@ -1,0 +1,12 @@
+<span >
+[{{ log.fecha.toLocaleString()}}]
+</span>
+<span style="font-size: large;" class="text-uppercase" [ngClass]="isTipoError() ? 'text-danger' : 'text-info'">
+       [{{getDesTipo()}}]
+</span>
+<span style="font-size: large;" class="textext-uppercase text-primary">
+    [{{log.title}}]
+</span>
+<span class="text-dark">
+     {{log.text}}
+</span>

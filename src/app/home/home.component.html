@@ -1,0 +1,70 @@
+<div class="container pt-3">
+
+
+  
+  <div class="row ">
+      <div class="col-12 col-md-2">
+
+      </div>
+      <div class="col-12 col-md-8">
+        <app-valores-select class="" [disabled]="disabledModel.selectValores"></app-valores-select>
+
+      </div>
+      <div class="col-12 col-md-2">
+
+      </div>
+  </div>
+  <div class="row pt-4">
+        <div class="col-12 col-md-2">
+
+        </div>
+        <div class="col-12 col-md-8">
+          <app-login *ngIf="isStockIndexSet()" class="  " [disabled]="disabledModel.compLogin">
+        
+          </app-login>
+
+        </div>
+        <div class="col-12 col-md-2">
+
+        </div>
+  </div>
+
+  <div class="row pt-4" *ngIf="canMostrar()">
+    <div class="col-12 col-md-2">
+
+    </div>
+    <div class="col-12 col-md-8"> 
+      <app-ficha-valor class="" [disabled]="disabledModel.fichaValor"></app-ficha-valor>
+
+    </div>
+    <div class="col-12 col-md-2">
+
+    </div>
+</div>
+
+<div class="row pt-4" *ngIf="canMostrar()">
+  <div class="col-12 col-md-2">
+
+  </div>
+  <div class="col-12 col-md-8"> 
+    <app-actions-table [disabled]="disabledModel.fichaValor"></app-actions-table>
+
+  </div>
+  <div class="col-12 col-md-2">
+
+  </div>
+</div>
+  
+<div class="row pt-4" >
+  <div class="col-12 col-md-2">
+
+  </div>
+  <div class="col-12 col-md-8"> 
+    <app-lista-logs> </app-lista-logs>
+
+  </div>
+  <div class="col-12 col-md-2">
+
+  </div>
+</div>
+</div>

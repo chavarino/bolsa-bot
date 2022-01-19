@@ -1,0 +1,70 @@
+
+
+<div class="card bg-dark ">
+        
+    <h3 class="text-center text-light mt-2">
+        Información Detallada
+    </h3>
+
+    <div class="card-body">
+        <div class="row  mb-3">
+
+            <div class="col-12 col-sm-6 text-light">
+                <span>
+                    Hora: 
+                </span>
+                <span>
+                    {{modelo.indiceValor.time}}
+                </span>
+
+            </div>
+            <div class="col-12 col-sm-6  text-light">
+                            <span>
+                                Tipo posicion:
+                            </span>
+                            <span>
+                                {{getDesTipoPosicion()}}
+                            </span>
+
+                        </div>
+
+
+            
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+            <div class="col  mb-3" *ngFor="let col of columnas">
+                <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">{{col.titulo}}</label>
+                <strong class="col-4  border border-1 p-custom-valor rounded-end text-truncate" [title]="col.getValor()" [ngClass]="isString(col.clases) ? col.clases : col.clases()" >{{ col.getValor() }}</strong>
+        
+            </div>
+
+            <!-- 
+
+
+                <div class="col  mb-3 ">
+                    <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">Prec. Actual</label>
+                    <strong class="col-4 border border-1 p-custom-valor rounded-end text-warning">1.5</strong>
+                </div>
+                <div class="col  mb-3 ">
+                    <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">Prec. Minimo</label>
+                    <strong class="col-4 border border-1 p-custom-valor rounded-end text-danger">1.5</strong>
+                </div>
+            
+                <div class="col  mb-3 ">
+                    <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">Prec. Compra</label>
+                    <strong class="col-4 border border-1 p-custom-valor rounded-end text-primary">1.5</strong>
+                </div>
+                <div class="col  mb-3 ">
+                    <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">N. Acciones</label>
+                    <strong class="col-4 border border-1 p-custom-valor rounded-end text-primary">5000</strong>
+                </div>
+                <div class="col  mb-3 ">
+                    <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">Ganancia</label>
+                    <strong class="col-4 border border-1 p-custom-valor rounded-end text-secondary">300</strong>
+                </div>
+            -->
+        </div>
+    </div>
+
+</div>

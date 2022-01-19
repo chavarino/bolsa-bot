@@ -1,0 +1,46 @@
+<!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+    <div class="col  mb-3"  >
+        <label class="col-8 border border-1 rounded-start p-custom-label bg-dark text-light" for="">{{cols.titulo}}</label>
+        <strong class="col-4  border border-1 p-custom-valor rounded-end" [ngClass]="isString(cols.clases) ? cols.clases : cols.clases()" >{{ modelo[cols.campoValor] }}</strong>
+
+    </div>
+</div>
+-->
+<form #formulario="ngForm"  >
+    <table class="table table-dark table-striped">
+        <thead>
+            <th class="col-2 ">
+                Manual
+            </th>
+
+            <th class="col-4  ">
+                P. Venta
+            </th>
+            <th class="col-4 ">
+                Ganancia
+            </th>
+            <th class="col-2 ">
+                Activo
+            </th>
+        </thead>
+        <tbody>
+                <td class="col-2">
+                    <input class="form-check-input border border-light" type="checkbox" value="" name="isManual" id="flexCheckDefault" [(ngModel)]="modelo.isManual">
+                </td>
+                <td class="col-4">
+                    <input class="form-control bg-transparent text-light" id="disabledInputPVenta" name="pVenta" type="number"  [ngClass]="{'no-border': !modelo.isManual }" [(ngModel)]="modelo.pVenta" [disabled]="!modelo.isManual">
+    
+                        
+                </td>
+                <td class="col-4">
+                    <input class="form-control  bg-transparent text-light" id="disabledInputGanancias" name="ganancia" type="number" [ngClass]="{'no-border': modelo.isManual }"  [(ngModel)]="modelo.ganancia" [disabled]="modelo.isManual">
+                </td>
+                <td class="col-2">
+                    <input class="form-check-input border border-light" type="checkbox" value="" name="isActivo" id="flexCheckDefault" [(ngModel)]="modelo.isActivo">
+                </td>
+        </tbody> 
+    
+    </table>
+
+</form>

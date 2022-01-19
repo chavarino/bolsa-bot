@@ -1,0 +1,29 @@
+<div class="row g-3" *ngIf="!isLogged()">
+    <div class="col-12 col-md-4 col-lg-5">
+      <label for="staticEmail2" class="visually-hidden">User</label>
+      <input [disabled]="disabled" type="text" tabindex="0" class="form-control" id="staticEmail2" placeholder="User" [(ngModel)]="cred.user">
+    </div>
+    <div class="col-12 col-md-4 col-lg-5">
+      <label for="inputPassword2" class="visually-hidden">Password</label>
+      <input [disabled]="disabled" type="password" tabindex="0" class="form-control" id="inputPassword2" placeholder="Password" [(ngModel)]="cred.pass">
+    </div>
+    <div class="col-12 col-md-4 col-lg-2 text-center" >
+      <button [disabled]="disabled" tabindex="0" class="btn btn-primary mb-3 w-100" (click)="login()" [disabled]="!canLogin()">Conectar</button>
+    </div>
+</div>
+<div class="row" *ngIf="isLogged()">
+    <div class="col"></div>
+    <div class="col-12 col-md-3 mb-3 text-center">
+        
+        
+        
+        <strong class="badge bg-success text-uppercase p-2 m-1 w-100"   >
+            Conectado 
+        </strong>
+
+    </div>
+    <div class="col-12 col-md-4 text-center">
+        <button   tabindex="0" class="btn btn-primary mb-3 w-100" (click)="logout()" [disabled]="disabled || !canLogin()">Desconectar</button>
+
+    </div>
+</div>

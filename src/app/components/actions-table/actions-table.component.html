@@ -1,0 +1,55 @@
+ 
+
+
+<div class="card bg-dark ">
+        
+    <h3 class="text-center text-light mt-2">
+        Panel de acciones
+
+    </h3>
+    
+
+    <div class="card-body">
+
+        <div class="row">
+
+                <div class="col-12 col-sm-3">
+                    <label class="text-light  me-2" for="">Confirmacion</label>
+                    <input class="form-check-input "  type="checkbox"  [(ngModel)]="isConfirmacion">
+                    
+                </div>
+                <div class="col-12 col-sm-3">
+                    <label class="text-light  me-2" for="">M.Prueba</label>
+                    <input class="form-check-input "  type="checkbox"  [(ngModel)]="isModoPrueba">
+                    
+                </div>
+                <div class="col-12 col-sm-6" *ngIf="!isTipoPosicionActiva ()">
+                    <label class="text-light  me-2"  for="">P. Compra Auxiliar</label>
+
+                    <input type="text" [(ngModel)]="modelo.inputActionTable.pCompra">
+
+                </div>
+        </div>
+        <h4 class="text-light">Venta Normal</h4>
+        <div class="row">
+                <app-venta-row [pVenta]="99999" (umbralChange)="onChangeVentaNormalRow($event)" [nAcciones]="modelo.inputActionTable.nAcciones" [pCompra]="modelo.inputActionTable.pCompra"></app-venta-row>
+                
+        </div>
+        <h4 class="text-light">StopLose</h4>
+        <div class="row">
+                <app-venta-row  [pVenta]="0" (umbralChange)="onChangeStopLoseRow($event)"  [nAcciones]="modelo.inputActionTable.nAcciones" [pCompra]="modelo.inputActionTable.pCompra"></app-venta-row>
+                
+        </div>
+
+        <div class="row form-check form-switch">
+            <div class="col-12 text-right">
+
+                <i class="bi text-light float-end"   [ngClass]="modelo.activo ? 'bi-check-square' : 'bi bi-square'" (click)="modelActivoChanged()"></i>
+                <!-- <input class="form-check-input  float-end"  type="checkbox" [checked]="modelo.activo" id="flexSwitchCheckDefault" [(ngModel)]="modelo.activo" (ngModelChange)="modelActivoChanged($event)">-->
+                <label class="form-check-label float-end text-light me-5"  for="flexSwitchCheckDefault">Activado</label>
+
+            </div>
+          </div>
+    </div>
+    
+</div>

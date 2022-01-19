@@ -1,0 +1,11 @@
+<div class="row">
+
+    <div class="col-12">
+        <select class="form-select" tabindex="0" aria-label="Indices" [disabled]="disabled" (ngModelChange)="onValorChange($event)" [(ngModel)]="selectedValor">
+            <option selected [ngValue]="-1">Selecciona un índice</option>
+            <option *ngFor="let indice of indices" [ngValue]="indice">{{indice.valor}}</option>
+
+          </select>
+
+    </div>
+</div>

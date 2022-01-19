@@ -1,0 +1,20 @@
+input.form-control {
+
+    margin: auto;
+    max-width: 70% !important;
+    min-width: 60px !important;
+    &:disabled {
+        max-width: 100%!important;
+        text-align: center;
+    }
+}
+
+td, th {
+
+    text-align: center;
+}
+
+.no-border {
+
+    border: transparent;
+}
